@@ -5,17 +5,30 @@
  */
 package com.mycompany.virtualkeys;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 /**
  *
  * @author Rajat
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    static Menu mMenu = new Menu();
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        mainLoop();
+
     }
-    
+
+    public static void mainLoop() {
+       // while (mMenu.getStillRunning()) {
+            try {
+                mMenu.mainMenuLoop();
+
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input mis, try again");
+            }
+        //}
+    }
 }
