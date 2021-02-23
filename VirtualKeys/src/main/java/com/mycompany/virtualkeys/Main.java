@@ -6,7 +6,8 @@
 package com.mycompany.virtualkeys;
 
 import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 
 /**
  *
@@ -16,9 +17,13 @@ public class Main {
 
     static Menu mMenu = new Menu();
 
-    public static void main(String[] args) {
-        mainLoop();
-
+    public static void main(String[] args) throws IOException {
+        //mainLoop();
+        FileService.listContents();
+        FileService.createFile("time");
+        //FileService.deleteFile("time");
+        FileService.listContents();
+        FileService.searchFile("Inter.txt");
     }
 
     public static void mainLoop() {
