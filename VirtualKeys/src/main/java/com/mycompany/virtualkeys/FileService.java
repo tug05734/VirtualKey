@@ -22,11 +22,11 @@ import java.util.stream.Stream;
  *
  * @author Rajat
  */
-public final class FileService {
+public class FileService {
 
     private final static String directory = "src/main/java/com/mycompany/virtualkeys/testdirectory";
 
-    private FileService(String directory) {
+    public FileService(String directory) {
     }
 
     public static void listContents() throws IOException {
